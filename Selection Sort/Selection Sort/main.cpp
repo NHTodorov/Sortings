@@ -6,7 +6,7 @@ void SelectionSort(int arr[], int num) {
 	for (int i = 0; i < num - 1 ; i++) {	// traversing entire array
 		int MinIndex = i;	// min element index
 
-		for (int j = 0; j < num - i - 1; j++) {	// next ellement of array to check
+		for (int j = i + 1; j < num; j++) {	// next ellement of array to check
 			if (arr[j] < arr[MinIndex]) {	
 				//Note:	// for ascending order ---> arr[j] > arr[j + 1]
 
@@ -14,7 +14,7 @@ void SelectionSort(int arr[], int num) {
 			}
 		}
 		swap(arr[i], arr[MinIndex]);	// swap the ellements if arr[j] < arr[MinIndex]
-										// or swap the ellements (ONLY when the Note is used)  if  arr[j] > arr[MinIndex]		
+										// or swap the ellements (only when the Note is used)  if  arr[j] > arr[MinIndex]		
 	}
 }
 
